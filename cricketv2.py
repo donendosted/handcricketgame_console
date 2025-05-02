@@ -8,6 +8,7 @@ pball=0
 pover=0
 uscore=0
 pcscore=0
+answer = ["YES","yes","y","Y","Yes","yES"]
 def batting(over=5):
     global uwicket
     global uball
@@ -103,6 +104,8 @@ def toss():
                 choosebattingorbowling()
         except:
             print("Please donot mess again!")
-            choosebattingorbowling()
+            ans = input("wanna quit the game?")
+            if ans not in answer:
+                choosebattingorbowling()
     choosebattingorbowling()
 toss()
